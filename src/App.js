@@ -1,18 +1,19 @@
-import { useState } from "react";
-import Component1 from "./Components/Component1";
-import {ContextComponent3}  from "./Context_Exercise/ContextApi2022";
+// import "./App.css"
+import Login from "./Components/Login";
+import Profile from "./Components/Profile";
+import { useState } from 'react'
+import { LoginContext } from './Contexts/LoginContext'
+
 
 function App() {
-  const [name, setName] = useState("Marco");
-  const [car, setCar] = useState("BMW 8");
+  const [username, setUsername] = useState("");
+  const [showProfile, setShowProfile] = useState(false);
 
   return (
-    <div className="App">
-      {/* <ContextComponent3.Provider value={name, setName, car, setCar}> */}
-      <ContextComponent3.Provider value={[name, car]}>
-          <h1>Phase 2: React JS - Context API, React Query </h1>
-          <Component1 />
-      </ContextComponent3.Provider>
+    <div>
+      <LoginContext.Provider value={{username, setUsername, setShowProfile}}>
+        {username && showProfile ? <Profile /> : <Login /> }
+      </LoginContext.Provider>
     </div>
   );
 }
