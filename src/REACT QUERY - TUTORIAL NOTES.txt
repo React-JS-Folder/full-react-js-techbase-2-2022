@@ -1,0 +1,22 @@
+npm i react-query   // install React Query 
+
+1. import { useQuery } from 'react-query'
+
+you need to create a function to fetch something 
+and the function is part of the useQuery()
+
+example: 
+
+function fetchData() {
+   const res = fetch('https://///////////////////');
+
+   res.json()
+}
+
+const {data, status} = useQuery("description of the action", fetchFUNCTION);
+
+DATA is the url data 
+STATUS = error, loading or success
+
+
+STATUS WILL CREATE CONDITIONS TO SHOW "LOADING", "ERROR", or to use data.map(.....)
