@@ -18,8 +18,8 @@ function App() {
         <h1>Star Wars Info</h1>
         <Navbar setPage={setPage} />
         <div className="content">
-          {/* {page === 'planets' ? <Planets /> : <People />} */}
-          {page === 'planets' ? <Planets /> : "Nothing to see here"}
+          {page === 'planets' ? <Planets /> : <People />}
+          {/* {page === 'planets' ? <Planets /> : "Nothing to see here"} */}
         </div>
       </div>
 

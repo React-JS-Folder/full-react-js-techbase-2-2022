@@ -4,14 +4,13 @@ export default function Person(props) {
    const {person} = props;
 
    return (
-      <div>
-         {person.map((eachperson) => {
-            <div key={eachperson.id}>
-               <h3>{eachperson.title}</h3>
-               <h4>{eachperson.id}</h4>
+      <>
+         <div key={person.id}>
+            <h3>{person.title}</h3>
+            <h4>{person.id}</h4>
             <hr />
-            </div>
-         })}
-      </div>
+         </div>
+       
+      </>
    )
 }
