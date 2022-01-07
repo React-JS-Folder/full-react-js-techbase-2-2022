@@ -1,0 +1,41 @@
+React Query is a React JS Library to fetch data from url
+
+React Query useQuery - doesn't need useEffect to execute the code on Mounting 
+------------------------------------------------
+App.js or Index.js 
+1. import {QueryClientProvider, QueryClient} from 'react-query'
+
+2. Create a queryClient 
+   const queryClient = new QueryClient();
+
+
+3. Wrap all the components inside the function
+   <QueryClientProvider client={queryClient} >
+      Wrap the components you want to use react query
+   <QueryClientProvider>
+------------------------------------------------
+
+
+------------------------------------------------
+
+Component3.js 
+1. import {useQuery} from 'react-query'
+2. create a function to Fetch url 
+ 
+   const fetchYear2022 = () => {
+      const res = fetch('http://...address to fetch data');
+      return res.json();
+   }
+
+
+3. when you fetch data using useQuery() it gives you variables you can use 
+   isLoading, data, status .... many more
+
+export default Component3() {
+
+   const {isLoading, data, status} = useQuery("fetching 2022", fetchYear2022);
+
+   return (
+      {data && data.map()}          // create a condition, to make sure the "data" is not empty
+   )
+}
