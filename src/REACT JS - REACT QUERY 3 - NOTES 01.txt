@@ -1,0 +1,33 @@
+1. Create a react app  // npx create-react-app  <<name>>
+2. Install react query // npm i react-query 
+
+
+3. Create a query client and wrap anything you want 
+
+index.js
+            import {QueryClient, QueryClientProvider} from 'react-query'
+
+            const queryClient = new QueryClient();
+
+
+            ReactDOM.render(
+   
+               <QueryClientProvider client={queryClient} >
+                  <App />
+               </QueryClientProvider>
+            )
+
+-------------------------------------------------
+4. use the api            //-------- data, isLoading, isFetching, error  are what you need 95% of the cases --------//
+
+App.js
+            import { useQuery } from 'react-query'
+
+            const fetchUsers = async () => {
+               const res = await fetch('https://reqres.in/api/users?');
+               return res.json();
+            }
+
+            function App() {
+            const {data, isLoading, isFetching, error} = useQuery("fetch Users", fetchUsers);
+

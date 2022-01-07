@@ -1,0 +1,6 @@
+TEST YOUR FRONT-END AGAINST A REAL API 
+
+ 
+REQRES.IN            // FREE WEBSITE API// get, post...
+
+
