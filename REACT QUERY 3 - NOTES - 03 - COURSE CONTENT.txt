@@ -1,0 +1,15 @@
+COURSE CONTENT
+
+- Basic Queries
+- Poll Data
+- React Query Dev Tools
+- Create reusable query hooks
+- Query by ID
+- Parallel Queries
+- Dynamic Queries 
+- Dependent Queries 
+- Infinite & Paginated Queries 
+- Update Data using Mutations
+- Invalidate Queries 
+- Optimistic Updates
+- Axios Interceptor

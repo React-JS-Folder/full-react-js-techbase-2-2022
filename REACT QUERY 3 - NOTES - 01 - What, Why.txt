@@ -1,0 +1,19 @@
+REACT JS IS A LIBRARY and it has a library itself called REACT QUERY
+
+
+#What?
+React Query is a library to fetch data in a React application
+
+
+#Why?
+1. Since React is a UI library there is no specific pattern for data fetching
+
+2. To replace useEffect hook for data fetching and useState hook 
+   (to maintain component state like loading, error or resulting data)
+
+3. If the data is needed throughout the app, we tend to use state management libraries
+
+4. Most of the state managment libraries are good for working with client state. 
+(manage local changes like theme style, modal is open or not)
+
+5. State management libraries are not great for working with asynchronous or server state 
