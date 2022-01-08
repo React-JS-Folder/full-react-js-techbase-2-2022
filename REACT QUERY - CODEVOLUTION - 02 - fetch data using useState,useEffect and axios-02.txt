@@ -1,0 +1,30 @@
+import { useState, useEffect } from 'react'
+import axios from 'axios'
+
+export cost SuperHeroesPage = () => {
+   const [isLoading, setIsLoading] = useState(true);
+   const [data, setData] = useState([]);
+
+   useEffect(() => {
+      const fetchData = async () => {
+         const response = await axios('httpslsslskdlskds')         // axios(httpppppp////lkk///0).then().then().catch()
+         .then(() => {
+            setData(response.data);
+            setIsLoading(false); 
+         })
+      }
+   },[]);
+
+   return ( 
+      <div className="App">
+         {data.map((hero) => {
+            return <div key={hero.name}> {hero.name}</div>
+         })}
+      </div>
+   )
+
+
+
+
+
+}
