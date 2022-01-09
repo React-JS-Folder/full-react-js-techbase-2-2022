@@ -7,7 +7,7 @@ const fetchHeroesusingReactQuery = async () => {
 
 export default function SuperHeroesPage() {
 
-   const {isLoading, isError, error, data, status } = useQuery("super heros", fetchHeroesusingReactQuery);
+   const {isLoading, isFetching, isError, error, data, status } = useQuery("super heros", fetchHeroesusingReactQuery);
 
    if (isLoading) {
       return <h2>Loading...</h2>
@@ -15,6 +15,11 @@ export default function SuperHeroesPage() {
    // {isError && 'there was an error, connection was not successfull'}
    if (isError) {
       return <h3>There was an error: {error.message}</h3>
+   }
+
+   if (isFetching) {
+      console.log("This is fetching again " + isFetching);
+      return <h1>Query is repeated or data is being updated</h1>
    }
    return (
       

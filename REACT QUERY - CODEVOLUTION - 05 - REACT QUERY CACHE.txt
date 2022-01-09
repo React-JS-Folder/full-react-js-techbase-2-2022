@@ -1,0 +1,20 @@
+React Query Cache it to fetch and store internet resources to use them faster.
+Every query result is cashed for 5 minutes and if you fetch again that data, you will fetch it from your computer
+
+Cached data may have been updated in the server and React Query....triggers a background refetch for the same query 
+------
+Query made the first time
+isLoading = true 
+isFetching = true 
+------
+Query repeated or data updated 
+isFetching = true 
+-------------------------------------------------
+
+useQuery( "description", functionFetch(), {cacheTime } )   // To change the time the data is cashed, use the 3 parameter
+
+example: 
+useQuery("Heroes", fetchHeroes,  {cacheTime: '5000'});     // 5000 milliseconds - 5 seconds
+
+
+
