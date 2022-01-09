@@ -17,4 +17,15 @@ example:
 useQuery("Heroes", fetchHeroes,  {cacheTime: '5000'});     // 5000 milliseconds - 5 seconds
 
 
+CACHE TIME    how long to keep the fetched data stored on client's machine
+STALE TIME    how ofter to refetch the data stored already on client's machine 
+              stale time default value = 0 (EVERY TIME YOU QUERY THERE IS A BACKGROUND REFETCH)
 
+useQuery("Heroes", fetchHeroes, { staleTime: '30000' })     //each 30 seconds refetch data to see if data is updated 
+
+-------------------------------
+data will be the same on page  
+isLoading = false,  isFetching = false (for the next 30seconds) 
+-------------------------------
+after 30 seconds 
+isLoading = false, isFetching = true;
