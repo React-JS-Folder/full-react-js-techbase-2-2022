@@ -1,5 +1,9 @@
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'
 import { QueryClientProvider, QueryClient } from 'react-query'
+import { ReactQueryDevtools } from 'react-query/devtools'
+
+
+
 import HomePage from './components/Homepage';
 import RQSuperHeroesPage from './components/RQSuperHeroespage';
 import SuperHeroes from './components/SuperHeroespage';
@@ -27,6 +31,7 @@ function App() {
           <Route path="/RQSuperHeroespage" element={<RQSuperHeroesPage />} />
         </Routes>
       </Router>   
+      <ReactQueryDevtools initialIsOpen={false} position='bottom-right'/>
     </QueryClientProvider>
 
   );

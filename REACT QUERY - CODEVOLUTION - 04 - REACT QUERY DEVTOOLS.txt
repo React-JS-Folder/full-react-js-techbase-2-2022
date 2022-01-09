@@ -1,0 +1,22 @@
+REACT QUERY - DEVTOOLS 
+React Query Devtools is a tool just like google developer tools
+
+1. import { ReactQueryDevtools } from 'react-query/devtools'
+2. add it before the closing </QueryClientProvider>
+
+example:
+
+<QueryClientProvider client={anything} >
+
+
+   <ReactQueryDevtools initialIsOpen={false} position='botton-right' />
+</QueryClientProvider >
+
+
+
+note: important!!!
+<ReactQueryDev-t-ools      t is lowercase
+<ReactQueryDevtools />
+
+       {ReactQueryDev-t-ools}  
+import {ReactQueryDevtools} from 'react-query/devtools'
