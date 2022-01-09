@@ -1,2 +1,23 @@
 REACT QUERY - DEFAULT SETTINGS 
 each time you fetch data using useQuery it has default values
+
+const {data, isLoading, isFetching, error} = useQuery("description", functionFetch, {configuration})
+
+{
+   cacheTime: 500000,      //default time to keep your query 5 minutes after the query is garbage collector
+   staleTime: 0,           //To reduce the network requests when data doesn't change often // default time 0 seconds 
+   refetchOnMount: true,   //true is default 
+
+}
+
+if you want to refetch every 30 seconds and keep cacheTime with default value 
+{
+   staleTime: 30000,     in react-query-devtools the fresh flag will be on for 30 seconds 
+}
+
+-------------------------------------------------
+refetchOnMount: true           // refetch or stop refetch on mount // best option is -- true --
+
+refetchOnWindowFocus: true     // refetch every time you go back to the application (after browsing around)
+                               // it will trigger a background refetch
+

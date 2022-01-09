@@ -7,7 +7,11 @@ const fetchHeroesusingReactQuery = async () => {
 
 export default function SuperHeroesPage() {
 
-   const {isLoading, isFetching, isError, error, data, status } = useQuery("super heros", fetchHeroesusingReactQuery);
+   const {isLoading, isFetching, isError, error, data} = useQuery("super heros", fetchHeroesusingReactQuery,
+   {
+      refetchOnMount: true,
+      refetchOnWindowFocus: false,   //to stop refetching when you come back to this page. 
+   });
 
    if (isLoading) {
       return <h2>Loading...</h2>

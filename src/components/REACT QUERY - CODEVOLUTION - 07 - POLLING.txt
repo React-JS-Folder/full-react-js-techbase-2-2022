@@ -1,0 +1,11 @@
+REACT QUERY - DEFAULT SETTINGS 
+
+POLLING: 
+When you refetch data a regular intervals and it is in sync with remote data.
+Polling is independent from other refetch settings (other refetching depend on user interaction)
+
+refetchInterval: false   //default  //if you give a number that is the interval to refetch - permanently
+
+
+refetchInterval: 2000                //it will refetch the query every 2 seconds //IF THE WINDOW IS FOCUS 
+refetchIntervalInBackground: true    //to refetch the query whether you are on the page or not 
