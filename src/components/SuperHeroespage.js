@@ -12,17 +12,15 @@ export default function SuperHeroesPage() {
    if (isLoading) {
       return <h2>Loading...</h2>
    }
-   // {isError && 'there was an error, connection was not successfull'}
    if (isError) {
       return <h3>There was an error: {error.message}</h3>
    }
-
    if (isFetching) {
       console.log("This is fetching again " + isFetching);
       return <h1>Query is repeated or data is being updated</h1>
    }
+
    return (
-      
       <>
          <h1>Hello World, this is the new stronger, smarter, better Marco</h1> 
          <h5>this is inside the return statement, but not inside the data.map</h5>

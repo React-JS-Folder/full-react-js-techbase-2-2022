@@ -1,0 +1,2 @@
+REACT QUERY - DEFAULT SETTINGS 
+each time you fetch data using useQuery it has default values
