@@ -1,39 +1,35 @@
-import { useState, useEffect } from 'react'
 import axios from 'axios'
+import { useQuery } from 'react-query'
+
+const fetchHeroesusingReactQuery = async () => {
+   return axios.get('https://jsonplaceholder.typicode.com/albums');
+}
 
 export default function SuperHeroesPage() {
-   const [isLoading, setIsLoading] = useState(true);
-   const [error, setError] = useState(false);
-   const [data, setData] = useState([]);
 
+   const {isLoading, error, data, status } = useQuery("testing React Query", fetchHeroesusingReactQuery);
 
-   useEffect(() => {
-      axios.get('http://localhost:4000/superheroes')
-         .then( (res) => {
-            setData(res.data);
-            console.log(res.data);
-            setIsLoading(false)
-         }).catch((error) => {
-            setIsLoading(false)
-            setError(true);
-         })
-   }, []);
-
-   // {isLoading && <h3>Loading...</h3>}
    if (isLoading) {
       return <h2>Loading...</h2>
    }
-   if(error) {
-      return <h2>Sorry, server is not responding..</h2>
-   }
-   // {error && <h2>Sorry, server is not responding try later</h2>}
+
 
    return (
-      <div>
-         <h2>Traditional SuperHeroes Page</h2>
-         {data && data.map((hero) => {
-            return <h3 key={hero.name}>{hero.name}</h3>
-         })}
-      </div>
-   )
+      
+      <>
+         <h1>Hello World, this is the new stronger, smarter, better Marco</h1> 
+         <h5>this is inside the return statement, but not inside the data.map</h5>
+
+         {data?.data.map((eachElement) => {
+            return (  
+               <div key={eachElement.id}>
+                  <p>{eachElement.id}. <b>{eachElement.title}</b></p>
+               </div>
+                  
+               )
+            })}
+      </>
+
+   ) 
 }
+
