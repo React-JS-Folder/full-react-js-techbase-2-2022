@@ -2,18 +2,20 @@ import axios from 'axios'
 import { useQuery } from 'react-query'
 
 const fetchHeroesusingReactQuery = async () => {
-   return axios.get('https://jsonplaceholder.typicode.com/albums');
+   return axios.get('https://jsonplaceholder.typicode.com/albums55555');
 }
 
 export default function SuperHeroesPage() {
 
-   const {isLoading, error, data, status } = useQuery("testing React Query", fetchHeroesusingReactQuery);
+   const {isLoading, isError, error, data, status } = useQuery("testing React Query", fetchHeroesusingReactQuery);
 
    if (isLoading) {
       return <h2>Loading...</h2>
    }
-
-
+   // {isError && 'there was an error, connection was not successfull'}
+   if (isError) {
+      return <h3>There was an error: {error.message}</h3>
+   }
    return (
       
       <>

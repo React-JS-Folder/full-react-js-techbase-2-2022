@@ -1,0 +1,27 @@
+REACT QUERY HAS BUILT-IN  STATES;     https://react-query.tanstack.com/reference/useQuery
+
+Destructuring useQuery() can get automatic values from fetching data using fetch or axios 
+most importants are:
+- data   //data to create a map
+- status
+- error  //type of error
+- isError  //boolean true/false
+- isLoading  //boolean true/false
+- isLoadingError
+- isSuccess
+
+example:    
+const {data, isLoading, error, isError} = useQuery("fecthPics", functionFetchPics);
+
+HOW TO HANDLE ERRORS USING REACT QUERY 
+
+const { data, error } = useQuery("Dogs images", fetchDogsImages);
+
+
+{isError && "there was an error"}  //jsx  only works inside the return statement 
+
+if(isError) {return "There was an error}   //javascript this works outside the return statemente
+
+
+example: 
+if(isError) { return "There was an error" }     // if (isError = true)
