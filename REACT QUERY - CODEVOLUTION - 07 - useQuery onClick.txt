@@ -1,0 +1,36 @@
+REACT QUERY - useQuery onClick
+
+
+1. destructure useQuery 
+   const {.., .., refetch, ..., } = useQuery(x,x,{ emabled: false})
+
+
+2. create a button 
+   <button onClick={refetch} >fetch heros </button>
+-----------------------------------------------------------------------------------------------
+
+
+
+const fetchSuperHeroes = () => {
+   return axios.get('http://localhost:4000/superheroes');
+}
+
+export const RQSuperHeroesPage = () => {
+   const { refetch } = useQuery ( x,x, { enabled: false} )     
+ 
+  
+
+      return (
+         <>
+            <button onClick={refetch}>Fetch data</button>
+            { data?.data.map((hero) => {           //check if data or data.data or data.data.data 
+               return (
+                  <p key={hero.id}> {hero.email} </p>
+               )
+            })}
+         </>
+      )
+
+
+
+}
