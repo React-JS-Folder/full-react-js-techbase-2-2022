@@ -1,0 +1,27 @@
+REACT QUERY - useQuery onSuccess, onError
+
+To create side effects to queries 
+
+{
+   onSuccess: functionName,
+   onError: functionName2
+}
+
+const showOnSuccess = () => {
+   console.log("useQuery connection was successfull");
+}
+
+const OnError = () => {
+   console.log("useQuery connection was not possible");
+}
+
+
+const {data, isLoading, etc} = useQuery(x,x,{ 
+   onSuccess: showOnSuccess,   
+   onError,                   // if the function has same name as the property, just add the property 
+})
+
+REACT QUERY CAN ALSO ADD FLAGS TO THE FUNCTIONS AS PARAMETERS
+  const onError = (error) => {
+     console.log()
+  }
