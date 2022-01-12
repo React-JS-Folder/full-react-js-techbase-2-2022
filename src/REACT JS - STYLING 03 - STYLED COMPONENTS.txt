@@ -1,0 +1,21 @@
+STYLED COMPONENTS
+
+- Add CSS by styling the components (component could in this case just be a simple <p>, <button>..)
+- npm install styled-components 
+- vscode-styled-components  (plugin for VSCode)
+
+- Simple styling
+- Conditional styling (based on props)
+- Extending styles 
+- Media Query / onHover
+
+
+Example: 
+Style a button using Styled Components in React JS 
+
+1. import styled from "styled-components"
+
+2. create a component add style                /// replace { } for ` ` 
+   const StyledButton = styled.button` 
+   background-color: red;
+   `   

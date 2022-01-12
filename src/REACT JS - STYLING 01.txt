@@ -1,0 +1,29 @@
+REACT JS - Styling
+- CSS
+- SCSS
+- CONDITIONAL RENDERING
+- CSS MODULES
+   
+
+## CSS 
+   Inline CSS -- (bad practice) ------------------------------
+   <h1 style={{color: 'red'}} > This is the header </h1>
+
+   External Style Sheet --------------------------------------
+   import "./header.css" 
+
+   <h3 className="sidebarheading">Sidebar Title</h3>
+
+
+## CONDITIONAL RENDERING 
+   React JS can add javascript expressions or (javascript code) as class names 
+
+
+   	const headerText = "This is a header";
+
+	   <h1 className={headerText.length > 5 ? "header" : null} > {headerText} </h1>
+
+## SCSS
+   1. npm install node-sass        
+   2. create files SCSS
+   3. import on the file you want to use them

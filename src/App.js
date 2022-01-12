@@ -1,8 +1,10 @@
+import HomePage from "./components/PAGES/HomePage";
 
 function App() {
   return (
     <div className="App">
-      <h1>Phase 2: React JS - Context API, React Query </h1>
+      <h1>Phase 3: React JS - Styling </h1>
+      <HomePage />
     </div>
   );
 }
