@@ -6,13 +6,13 @@ function App() {
     <div className="App" style={{ width: '80%', margin: 'auto'}}>
       <h1>Phase 3: React JS - Styling - Extending styles </h1>
       <h4>Create the components (elements) at the top above the Page Component </h4>
-      <ul>
+      <ol>
         <li>import styled from 'styled-components</li> 
         <li>return.. button.. button</li>
         <li>Create componet styled-components</li>
         <li>Create extended button from already created button component</li>
         <li>Styled-components - lets you add media queries, pseudo-elements (hover,....)</li>
-      </ul>
+      </ol>
       <hr />
     
       const StyledBasicButton = styled.button` <br />
