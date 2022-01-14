@@ -11,11 +11,20 @@ STYLED COMPONENTS
 
 
 Example: 
-Style a button using Styled Components in React JS 
+Style a button using Styled Components in React JS using back ticks to add css properties
 
 1. import styled from "styled-components"
 
 2. create a component add style                /// replace { } for ` ` 
+
+  const StyledButton = styled.button` `       // this is to create a button with css style 
+  const StyledH2 = styled.h2` `               // this is to create an h2 with css style 
+   
+  example:
    const StyledButton = styled.button` 
-   background-color: red;
+    background-color: red;
+    padding: 20px;
    `   
+
+3. The component button is     <StyledButton > click this button </StyledButton>
+   The component h2 is         <StyledH2 > This is an H2 ELEMENT </StyledH2>

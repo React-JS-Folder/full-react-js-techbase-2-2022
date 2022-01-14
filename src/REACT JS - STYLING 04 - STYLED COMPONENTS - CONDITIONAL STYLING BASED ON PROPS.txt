@@ -1,0 +1,15 @@
+REACT JS - STYLED COMPONENTS - CONDITIONAL STYLING BASED ON PROPS
+
+
+Create a button using Styled Components 
+
+return (
+   <StyledButton > button1 </StyledButton>                 //there is no props on this component 
+   <StyledButton primary> button2 </StyledButton>          //there is a property waiting props (to inherit a value)
+)
+
+
+
+const StyledButton = styled.button`
+   background-color: ${(props) => (props.primary ? "red" : "green")};
+`;
