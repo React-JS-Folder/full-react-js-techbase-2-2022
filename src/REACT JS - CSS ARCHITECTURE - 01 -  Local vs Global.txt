@@ -1,0 +1,24 @@
+CSS Architecture in React
+3 main ways of styling React apps
+CSS Modules
+Styled Components
+Utility / Component tools (Material UI, Bootstrap, Tailwind...)
+
+1. DESIGN SYSTEM 
+The App design information 
+-Colours
+-Font sizes
+-Style
+-etc.
+
+-Everything is ready before the development of the App/Website
+
+-------------------------------------
+CSS Modules 
+Local                             Global
+.checkoutIcon {                     textarea {
+   width: 2rem;                        font: bold;
+   height: 2rem;                    }
+}
+
+<img className={styles.checkoutIcon}         <textarea value={info || undefined} id="info"
